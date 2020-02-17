@@ -66,11 +66,11 @@ Ff用于预测文本区域、内核kernels和相似度向量。最后，作者�
 
 Lagg用于衡量文本实例和其对应kernel的loss，作用是保证同一文本实例的kernel和文本实例内其它像素点之间的距离小于&agg，其公式如下：
 
-![img]images/8.png)
+![img](images/8.png)
 
 ![img](images/9.png)
 
-其中N是文本实例的个数，Ti是第i个文本实例，D(p,Ki)定义了像素p和第Ti个文本实例的kernel Ki之间的距离。&agg是一个常量，根据经验设置为0.5，用于过滤容易样本。F(p)是像素p的相似度向量。g(.)是kernel Ki的相似度向量，可以通过![https://img2018.cnblogs.com/blog/1294992/201908/1294992-20190828180531034-1282659197.png](images/10.png)来计算。
+其中N是文本实例的个数，Ti是第i个文本实例，D(p,Ki)定义了像素p和第Ti个文本实例的kernel Ki之间的距离。&agg是一个常量，根据经验设置为0.5，用于过滤容易样本。F(p)是像素p的相似度向量。g(.)是kernel Ki的相似度向量，可以通过![img](images/10.png)来计算。
 
 Ldis是用于不同文本实例的kernel的loss，其作用是保证任意两个kernel之间的距离大于&dis，其公式如下：
 
